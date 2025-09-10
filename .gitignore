@@ -12,6 +12,7 @@ build/
 develop-eggs/
 dist/
 downloads/
+script.ipynb/
 venv/
 eggs/
 .eggs/
