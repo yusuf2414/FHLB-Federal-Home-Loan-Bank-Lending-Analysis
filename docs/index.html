@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>FHLB Lending – Bank Image Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; padding: 20px; max-width: 1200px; margin: 0 auto; }
+    header { margin-bottom: 16px; }
+    .controls { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 16px; }
+    select { padding: 10px; border-radius: 10px; border: 1px solid #ddd; }
+    #gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    figure { margin: 0; border: 1px solid #eee; border-radius: 12px; padding: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); background: #fff; }
+    figcaption { color: #666; font-size: .9rem; margin-top: 6px; }
+    .muted { color:#666; }
+    @media (max-width: 900px) { #gallery { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FHLB Lending – Bank Image Viewer</h1>
+    <p class="muted">Pick a bank to see its figures. The images are pre-generated and hosted in this repo.</p>
+  </header>
+
+  <div class="controls">
+    <label>
+      Bank
+      <select id="bankSelect"></select>
+    </label>
+    <div id="note" class="muted"></div>
+  </div>
+
+  <div id="gallery"></div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
