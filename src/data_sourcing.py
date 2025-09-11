@@ -25,15 +25,18 @@ class DataCombining:
                 if item.endswith('.csv'):
                     file_path = os.path.join(self.folder_path, item)
                     df = pd.read_csv(file_path)
+                    #### column had an issue with the data 
+                    if 'LoanAcquistionDate' in df.columns:
+                        df.rename(columns={'LoanAcquistionDate': 'LoanAcquisitionDate'}, inplace=True)
 
                     print(f"Reading file: {item}")
                     print(f"File path: {len(df.columns)}")
 
                     combined_df = pd.concat([combined_df, df], ignore_index=True)
 
-            #combined_df_path = os.path.join(combined_data_folder, 'combined_df.csv')
-            #combined_df.to_csv(combined_df_path, index=False, header=True)
-            #print(f"Combined CSV saved to: {combined_df_path}")
+            combined_df_path = os.path.join(combined_data_folder, 'first_combined_df.csv')
+            combined_df.to_csv(combined_df_path, index=False, header=True)
+            print(f"first Combined CSV saved to: {combined_df_path}")
 
             self.combined_df = combined_df
 
@@ -60,25 +63,33 @@ class Data_Transformation:
 
         
         ### Change adjusting name for borrower 1 and 2 , race , sex 
-        race_map = { 
+        race_map1 = { 
                 1: 'American_indian',2: 'Asian',
                 3: 'African_American',4: 'Native_Hawaiian',
-                5: 'White', 6: 'N/A',7: 'Institution'       
+                5: 'White', 6: 'N/A', 7: 'Institution'      
             }
-
-        self.combined_df['Borrower1Race1Type'] = self.combined_df['Borrower1Race1Type'].map(race_map)
-        self.combined_df['Borrower1Race2Type'] = self.combined_df['Borrower1Race2Type'].map(race_map)
-
-        sex_map = {
-             1 : 'Male', 2 :'Female'
-        }
-        self.combined_df['Borrower1SexType'] = self.combined_df['Borrower1SexType'].map(sex_map)
-        self.combined_df['Borrower2SexType'] = self.combined_df['Borrower2SexType'].map(sex_map)
         
-        self.combined_df['Borrower1Race1Type'] = self.combined_df['Borrower1Race1Type'].map(race_map)
-        #####
+        race_map2 = { 
+                1: 'American_indian',2: 'Asian',
+                3: 'African_American',4: 'Native_Hawaiian',
+                5: 'White', 6: 'N/A', 7: 'Institution' , 8:"No_co_borrower"     
+            }
+        
+        self.combined_df['Borrower1Race1Type'] = self.combined_df['Borrower1Race1Type'].map(race_map1)
+        self.combined_df['Borrower2Race1Type'] = self.combined_df['Borrower2Race1Type'].map(race_map2)
 
+        # sex_map1 = {
+        #      1 : 'Male', 2 :'Female' , 3: 'N/A' ,4:'Institution' ,5:'N/A' ,6:'Indeterminate Value'
+        # }
+        # sex_map2 = {
+        #      1 : 'Male', 2 :'Female' , 3: 'N/A' ,4:'No Co-Borrower,' ,5:'N/A' ,6:'Indeterminate Value'
+        # }
+        # self.combined_df['Borrower1SexType'] = self.combined_df['Borrower1SexType'].map(sex_map1)
+        # self.combined_df['Borrower2SexType'] = self.combined_df['Borrower2SexType'].map(sex_map2)
+        
+        #####
         #### Checking the income area category to see if individuals that are being borrowed belong to which category 
+        
         income_area = []
 
         for i in range(len(self.combined_df)):
@@ -97,8 +108,8 @@ class Data_Transformation:
         return self.combined_df
    
 
-# if __name__ == "__main__":
-#     combiner = DataCombining()
-#     combined_df = combiner.data_combination()
-#     Transformation_instance = Data_Transformation(combined_df)
-#     final_combination = Transformation_instance.add_format_columns()
+if __name__ == "__main__":
+    combiner = DataCombining()
+    combined_df = combiner.data_combination()
+    Transformation_instance = Data_Transformation(combined_df)
+    final_combination = Transformation_instance.add_format_columns()

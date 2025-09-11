@@ -14,53 +14,53 @@
   "images": {
     "Boston": [
       "Boston/Distributions%20of%20Key%20Mortgage%20Metrics_Boston.png",
-      "Boston/income_area_category_plot_Boston.png",
-      "Boston/ltv_category_plot_Boston.png"
+      "Boston/income_area_category_trend_Boston.png",
+      "Boston/Risk_trend_Boston.png"
     ],
     "Chicago": [
       "Chicago/Distributions%20of%20Key%20Mortgage%20Metrics_Chicago.png",
-      "Chicago/income_area_category_plot_Chicago.png",
-      "Chicago/ltv_category_plot_Chicago.png"
+      "Chicago/income_area_category_trend_Chicago.png",
+      "Chicago/Risk_trend_Chicago.png"
     ],
     "Cincinnati": [
       "Cincinnati/Distributions%20of%20Key%20Mortgage%20Metrics_Cincinnati.png",
-      "Cincinnati/income_area_category_plot_Cincinnati.png",
-      "Cincinnati/ltv_category_plot_Cincinnati.png"
+      "Cincinnati/income_area_category_trend_Cincinnati.png",
+      "Cincinnati/Risk_trend_Cincinnati.png"
     ],
     "Dallas": [
       "Dallas/Distributions%20of%20Key%20Mortgage%20Metrics_Dallas.png",
-      "Dallas/income_area_category_plot_Dallas.png",
-      "Dallas/ltv_category_plot_Dallas.png"
+      "Dallas/income_area_category_trend_Dallas.png",
+      "Dallas/Risk_trend_Dallas.png"
     ],
     "Des Moines": [
       "Des%20Moines/Distributions%20of%20Key%20Mortgage%20Metrics_Des%20Moines.png",
-      "Des%20Moines/income_area_category_plot_Des%20Moines.png",
-      "Des%20Moines/ltv_category_plot_Des%20Moines.png"
+      "Des%20Moines/income_area_category_trend_Des%20Moines.png",
+      "Des%20Moines/Risk_trend_Des%20Moines.png"
     ],
     "Indianapolis": [
       "Indianapolis/Distributions%20of%20Key%20Mortgage%20Metrics_Indianapolis.png",
-      "Indianapolis/income_area_category_plot_Indianapolis.png",
-      "Indianapolis/ltv_category_plot_Indianapolis.png"
+      "Indianapolis/income_area_category_trend_Indianapolis.png",
+      "Indianapolis/Risk_trend_Indianapolis.png"
     ],
     "New York": [
       "New%20York/Distributions%20of%20Key%20Mortgage%20Metrics_New%20York.png",
-      "New%20York/income_area_category_plot_New%20York.png",
-      "New%20York/ltv_category_plot_New%20York.png"
+      "New%20York/income_area_category_trend_New%20York.png",
+      "New%20York/Risk_trend_New%20York.png"
     ],
     "Pittsburgh": [
       "Pittsburgh/Distributions%20of%20Key%20Mortgage%20Metrics_Pittsburgh.png",
-      "Pittsburgh/income_area_category_plot_Pittsburgh.png",
-      "Pittsburgh/ltv_category_plot_Pittsburgh.png"
+      "Pittsburgh/income_area_category_trend_Pittsburgh.png",
+      "Pittsburgh/Risk_trend_Pittsburgh.png"
     ],
     "San Francisco": [
       "San%20Francisco/Distributions%20of%20Key%20Mortgage%20Metrics_San%20Francisco.png",
-      "San%20Francisco/income_area_category_plot_San%20Francisco.png",
-      "San%20Francisco/ltv_category_plot_San%20Francisco.png"
+      "San%20Francisco/income_area_category_trend_San%20Francisco.png",
+      "San%20Francisco/Risk_trend_San%20Francisco.png"
     ],
     "Topeka": [
       "Topeka/Distributions%20of%20Key%20Mortgage%20Metrics_Topeka.png",
-      "Topeka/income_area_category_plot_Topeka.png",
-      "Topeka/ltv_category_plot_Topeka.png"
+      "Topeka/income_area_category_trend_Topeka.png",
+      "Topeka/Risk_trend_Topeka.png"
     ]
   }
 }

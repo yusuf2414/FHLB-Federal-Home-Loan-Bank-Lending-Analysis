@@ -10,8 +10,8 @@ combiner = DataCombining()
 combined_df = combiner.data_combination()
 Transformation_instance = Data_Transformation(combined_df)
 final_combination = Transformation_instance.add_format_columns()
-Images_class_instance = OverallImages(dataframe = combined_df)
+Images_class_instance = OverallImages(combined_df)
 Images_class_instance.metricimages()
-Images_class_instance.lower_income_area()
+#Images_class_instance.lower_income_area()
 
 
